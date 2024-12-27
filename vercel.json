@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "app.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/brat",
+      "dest": "/app.js"
+    }
+  ]
+}
