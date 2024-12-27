@@ -62,7 +62,7 @@ app.get('/brat', (req, res) => {
 
     try {
         const imageBuffer = generateLowQualityImage(text);
-        res.setHeader('Content-Type', 'image/png');
+        res.set('Content-Type', 'image/png');
         res.send(imageBuffer); // Kirim gambar langsung ke browser
     } catch (error) {
         console.error('Gagal membuat gambar:', error.message);
@@ -70,7 +70,9 @@ app.get('/brat', (req, res) => {
     }
 });
 
-// Fungsi untuk menangani permintaan serverless di Vercel
-module.exports = (req, res) => {
-    app(req, res); // Menjalankan aplikasi express pada fungsi serverless
-};
+// Jalankan server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+module.exports = app;
