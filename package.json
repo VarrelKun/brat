@@ -1,15 +1,14 @@
 {
-  "name": "brat gen",
+  "name": "random-text-image",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "Serverless function to generate random text images",
+  "main": "api/brat.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "vercel dev"
   },
   "dependencies": {
-    "canvas": "^3.0.0",
-    "express": "^4.17.1"
+    "canvas": "^2.8.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": "18.x"
   }
